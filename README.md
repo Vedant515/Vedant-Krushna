@@ -1,7 +1,12 @@
 EMP Tracker
 
-made by Vedant-Krushna
+made by Vedant AndKrushna
 
- we will made a UI of an our project
- 
- we will keep updating info of our website to an mentor and team
+Admin side -> [ home.html…]()
+
+Employee side -> [ emp.html…]()
+
+
+Backend is remaining we are working on that
+
+we will keep updating info of our website to an mentor and team
