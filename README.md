@@ -2,9 +2,9 @@ EMP Tracker
 
 made by Vedant And Krushna
 
-Admin side -> [ home.html…]()
+Admin side -> You can check home.html
 
-Employee side -> [ emp.html…]()
+Employee side -> You can check emp.html
 
 
 Backend is remaining we are working on that
