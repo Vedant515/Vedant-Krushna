@@ -1,6 +1,6 @@
 EMP Tracker
 
-made by Vedant AndKrushna
+made by Vedant And Krushna
 
 Admin side -> [ home.html…]()
 
