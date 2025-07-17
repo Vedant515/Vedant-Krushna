@@ -1,0 +1,361 @@
+/* style.css */
+
+/* Custom font for Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 80rem; /* Equivalent to max-w-6xl */
+    padding: 1rem; /* Equivalent to p-4 */
+}
+
+@media (min-width: 768px) { /* md: */
+    .page-wrapper {
+        padding: 2rem; /* Equivalent to md:p-8 */
+    }
+}
+
+/* Header Styles */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1rem; /* p-4 */
+    margin-bottom: 2rem; /* mb-8 */
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* space-x-3 */
+}
+
+.profile-icon {
+    display: inline-block;
+    width: 1.75rem; /* w-7 */
+    height: 1.75rem; /* h-7 */
+    vertical-align: middle;
+    color: #4b5563; /* text-gray-700 */
+    fill: currentColor;
+}
+
+.profile-name {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-800 */
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.5rem; /* space-x-6 */
+}
+
+.nav-button {
+    color: #4b5563; /* text-gray-600 */
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* transition duration-200 ease-in-out */
+    padding-bottom: 0.25rem; /* pb-1 */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    color: #1f2937; /* hover:text-gray-800 */
+}
+
+.nav-button.active {
+    color: #1f2937; /* text-gray-800 */
+    font-weight: 600; /* font-semibold */
+    border-bottom: 2px solid #000; /* border-b-2 border-black */
+}
+
+/* Main Content Card */
+.main-content-card {
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1.5rem; /* p-6 */
+    width: 100%;
+    max-width: 56rem; /* max-w-4xl */ /* Adjusted from original to fit the table better */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end; /* justify-end */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.add-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* space-x-2 */
+    color: #4b5563; /* text-gray-700 */
+    font-weight: 500; /* font-medium */
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* transition duration-200 */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    color: #1f2937; /* hover:text-gray-900 */
+}
+
+.add-icon {
+    display: inline-block;
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+}
+
+.data-table {
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table thead tr {
+    border-bottom: 1px solid #e5e7eb; /* divide-y divide-gray-200 */
+}
+
+.table-header {
+    padding: 0.75rem 1.5rem; /* px-6 py-3 */
+    text-align: left;
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 500; /* font-medium */
+    color: #6b7280; /* text-gray-500 */
+    text-transform: uppercase;
+    letter-spacing: 0.05em; /* tracking-wider */
+}
+
+.table-header.action-header {
+    text-align: right;
+}
+
+.table-body .table-row {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e7eb; /* divide-y divide-gray-200 */
+}
+
+.table-body .table-row:last-child {
+    border-bottom: none;
+}
+
+.table-data {
+    padding: 1rem 1.5rem; /* px-6 py-4 */
+    white-space: nowrap;
+    font-size: 0.875rem; /* text-sm */
+    color: #1f2937; /* text-gray-900 */
+}
+
+.action-cell {
+    text-align: right;
+    font-weight: 500; /* font-medium */
+}
+
+.three-dots-button {
+    color: #6b7280; /* text-gray-500 */
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem; /* Small padding for click area */
+}
+
+.three-dots-button:hover {
+    color: #4b5563; /* hover:text-gray-700 */
+}
+
+.three-dots-icon {
+    display: inline-block;
+    width: 1rem; /* w-4 */
+    height: 1rem; /* h-4 */
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem; /* rounded-lg */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-xl */
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.modal-overlay.show .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6b7280; /* gray-500 */
+    transition: color 0.2s ease-in-out;
+}
+
+.close-button:hover {
+    color: #4b5563; /* gray-700 */
+}
+
+.modal-title {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 1.5rem; /* mb-6 */
+    text-align: center;
+}
+
+.form-fields .form-group {
+    margin-bottom: 1.5rem; /* space-y-4 */
+}
+
+.form-fields .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    color: #4b5563; /* text-gray-700 */
+    margin-bottom: 0.25rem; /* mb-1 */
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.75rem; /* p-3 */
+    border: 1px solid #e5e7eb; /* border border-gray-200 */
+    border-radius: 0.5rem; /* rounded-lg */
+    background-color: #f3f4f6; /* bg-gray-100 */
+    color: #1f2937; /* Default text color */
+}
+
+.input-field::placeholder {
+    color: #9ca3af; /* placeholder-gray-400 */
+}
+
+.input-field:focus {
+    outline: none; /* focus:outline-none */
+    box-shadow: 0 0 0 2px #60a5fa; /* focus:ring-2 focus:ring-blue-400 */
+    border-color: transparent;
+}
+
+.submit-button {
+    margin-top: 2rem; /* mt-8 */
+    width: 100%;
+    background-color: #000; /* bg-black */
+    color: #fff; /* text-white */
+    font-weight: 600; /* font-semibold */
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    transition-property: background-color;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* transition duration-300 ease-in-out */
+    border: none;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #1f2937; /* hover:bg-gray-800 */
+}
+
+/* Context Menu Styles */
+.context-menu {
+    position: fixed;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    min-width: 120px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.context-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.context-menu-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.875rem;
+    color: #374151;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.context-menu-button:hover {
+    background-color: #f3f4f6;
+}

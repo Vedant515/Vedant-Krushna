@@ -1,0 +1,155 @@
+/* style.css */
+
+/* Custom font for Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 80rem; /* Equivalent to max-w-6xl */
+    padding: 1rem; /* Equivalent to p-4 */
+}
+
+@media (min-width: 768px) { /* md: */
+    .page-wrapper {
+        padding: 2rem; /* Equivalent to md:p-8 */
+    }
+}
+
+/* Header Styles */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1rem; /* p-4 */
+    margin-bottom: 2rem; /* mb-8 */
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* space-x-3 */
+}
+
+.profile-icon {
+    display: inline-block;
+    width: 1.75rem; /* w-7 */
+    height: 1.75rem; /* h-7 */
+    vertical-align: middle;
+    color: #4b5563; /* text-gray-700 */
+    fill: currentColor;
+}
+
+.profile-name {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-800 */
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* space-x-2 */
+    color: #4b5563; /* text-gray-700 */
+    font-weight: 500; /* font-medium */
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* transition duration-200 */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    color: #1f2937; /* hover:text-gray-900 */
+}
+
+.logout-icon {
+    width: 1.25rem; /* w-5 */
+    height: 1.25rem; /* h-5 */
+    fill: currentColor;
+}
+
+/* Admin Panel Title */
+.admin-panel-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 2rem; /* mb-8 */
+    align-self: flex-start; /* self-start */
+}
+
+/* Cards Section */
+.cards-section {
+    display: grid;
+    grid-template-columns: 1fr; /* grid-cols-1 */
+    gap: 2rem; /* gap-8 */
+    width: 100%; /* w-full */
+}
+
+@media (min-width: 768px) { /* md: */
+    .cards-section {
+        grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 */
+    }
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1.5rem; /* p-6 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #e5e7eb; /* border border-gray-200 */
+}
+
+.card-title {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.card-description {
+    color: #4b5563; /* text-gray-600 */
+    margin-bottom: 2rem; /* mb-8 */
+}
+
+.card-button {
+    margin-top: auto; /* mt-auto */
+    color: #6b7280; /* text-gray-500 */
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* transition duration-200 */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.card-button:hover {
+    color: #4b5563; /* hover:text-gray-700 */
+}
+
+.card-arrow-icon {
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+    fill: currentColor;
+}
+.huhu{
+    text-decoration: none;
+}

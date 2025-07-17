@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="emp-manage.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="profile-section">
+                <!-- Profile Icon (simple SVG for accuracy) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="profile-icon">
+                    <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                </svg>
+                <span class="profile-name">Vedant Patil</span>
+            </div>
+            <nav class="main-nav">
+                <a href="emp-manage.html"><button class="nav-button active">Employees</button></a>
+                <a href="skill.html"><button class="nav-button">Skills</button></a>
+                <a href="task.html"><button class="nav-button">Task assignment</button></a>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="main-content-card">
+            <div class="card-actions">
+                <button id="add-employee-button" class="add-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="add-icon">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Add New Emp</span>
+                </button>
+            </div>
+
+            <!-- Employee Table -->
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th class="table-header">Name</th>
+                            <th class="table-header">Email</th>
+                            <th class="table-header">Role</th>
+                            <th class="table-header action-header"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body" id="employee-table-body">
+                        <!-- Employee Row 1 -->
+                        <tr class="table-row">
+                            <td class="table-data">Emp 1</td>
+                            <td class="table-data">Abc@gmail.com</td>
+                            <td class="table-data">ABC</td>
+                            <td class="table-data action-cell">
+                                <button class="three-dots-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="three-dots-icon">
+                                        <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Employee Row 2 -->
+                        <tr class="table-row">
+                            <td class="table-data">Emp 2</td>
+                            <td class="table-data">def@gmail.com</td>
+                            <td class="table-data">XYZ</td>
+                            <td class="table-data action-cell">
+                                <button class="three-dots-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="three-dots-icon">
+                                        <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Employee Row 3 -->
+                        <tr class="table-row">
+                            <td class="table-data">Emp 3</td>
+                            <td class="table-data">ghi@gmail.com</td>
+                            <td class="table-data">PQR</td>
+                            <td class="table-data action-cell">
+                                <button class="three-dots-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="three-dots-icon">
+                                        <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Employee Row 4 -->
+                        <tr class="table-row">
+                            <td class="table-data">Emp 4</td>
+                            <td class="table-data">jkl@gmail.com</td>
+                            <td class="table-data">MNO</td>
+                            <td class="table-data action-cell">
+                                <button class="three-dots-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="three-dots-icon">
+                                        <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Employee Modal -->
+    <div id="add-employee-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-button" id="close-modal-button">&times;</button>
+            <h3 class="modal-title">Add New Employee</h3>
+            <div class="form-fields">
+                <div class="form-group">
+                    <label for="new-emp-name" class="form-label">Name of Emp</label>
+                    <input type="text" id="new-emp-name" placeholder="Enter Name of Emp" class="input-field">
+                </div>
+                <div class="form-group">
+                    <label for="new-emp-email" class="form-label">Email of Emp</label>
+                    <input type="email" id="new-emp-email" placeholder="Enter Email of Emp" class="input-field">
+                </div>
+                <div class="form-group">
+                    <label for="new-emp-role" class="form-label">Role of Emp</label>
+                    <input type="text" id="new-emp-role" placeholder="Enter Role of Emp" class="input-field">
+                </div>
+            </div>
+            <button id="submit-employee-button" class="submit-button">
+                Submit
+            </button>
+        </div>
+    </div>
+
+    <!-- Context Menu for Three Dots -->
+    <div id="employee-context-menu" class="context-menu">
+        <button id="edit-employee-button" class="context-menu-button">Edit</button>
+        <button id="delete-employee-button" class="context-menu-button">Delete</button>
+    </div>
+
+    <!-- Edit Employee Modal (similar to Add Employee Modal) -->
+    <div id="edit-employee-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-button" id="close-edit-employee-modal-button">&times;</button>
+            <h3 class="modal-title">Edit Employee</h3>
+            <div class="form-fields">
+                <div class="form-group">
+                    <label for="edit-emp-name" class="form-label">Name of Emp</label>
+                    <input type="text" id="edit-emp-name" class="input-field">
+                </div>
+                <div class="form-group">
+                    <label for="edit-emp-email" class="form-label">Email of Emp</label>
+                    <input type="email" id="edit-emp-email" class="input-field">
+                </div>
+                <div class="form-group">
+                    <label for="edit-emp-role" class="form-label">Role of Emp</label>
+                    <input type="text" id="edit-emp-role" class="input-field">
+                </div>
+            </div>
+            <button id="save-employee-changes-button" class="submit-button">
+                Save Changes
+            </button>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="emp-manage.js"></script>
+</body>
+</html>

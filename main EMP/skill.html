@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Management</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="skill.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="profile-section">
+                <!-- Profile Icon (simple SVG for accuracy) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="profile-icon">
+                    <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                </svg>
+                <span class="profile-name">Vedant Patil</span>
+            </div>
+            <nav class="main-nav">
+                <a href="emp-manage.html"><button class="nav-button">Employees</button></a>
+                <a href="skill.html"><button class="nav-button active">Skills</button></a>
+                <a href="task.html"><button class="nav-button">Task assignment</button></a>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <h2 class="section-title">Skill Manage</h2>
+
+        <div class="skill-management-box" id="skill-management-box">
+            <div class="skill-management-header">
+                <button id="add-skill-button" class="add-skill-button">
+                    <span>Add Skill</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="add-icon">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button id="edit-skills-button" class="edit-skills-toggle-button"> <!-- Corrected ID to match JS -->
+                    Edit
+                </button>
+            </div>
+
+            <!-- Context Menu for Edit/Delete -->
+            <div id="skill-context-menu" class="context-menu">
+                <button id="edit-selected-skill-button" class="context-menu-button">Edit Selected</button>
+                <button id="delete-selected-skill-button" class="context-menu-button">Delete Selected</button>
+            </div>
+
+            <!-- Skills Table -->
+            <div class="table-container skills-table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th class="table-header checkbox-header"></th> <!-- Checkbox column header -->
+                            <th class="table-header">Name</th>
+                            <th class="table-header">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        <!-- Skill Row 1 -->
+                        <tr class="table-row">
+                            <td class="table-data checkbox-cell">
+                                <input type="checkbox" class="skill-checkbox">
+                            </td>
+                            <td class="table-data">Java Script</td>
+                            <td class="table-data">FrontEnd</td>
+                        </tr>
+                        <!-- Skill Row 2 -->
+                        <tr class="table-row">
+                            <td class="table-data checkbox-cell">
+                                <input type="checkbox" class="skill-checkbox">
+                            </td>
+                            <td class="table-data">MongoDB</td>
+                            <td class="table-data">Backend Framework</td>
+                        </tr>
+                        <!-- Skill Row 3 -->
+                        <tr class="table-row">
+                            <td class="table-data checkbox-cell">
+                                <input type="checkbox" class="skill-checkbox">
+                            </td>
+                            <td class="table-data">Express.js</td>
+                            <td class="table-data">Backend Framework</td>
+                        </tr>
+                        <!-- Skill Row 4 -->
+                        <tr class="table-row">
+                            <td class="table-data checkbox-cell">
+                                <input type="checkbox" class="skill-checkbox">
+                            </td>
+                            <td class="table-data">HTML</td>
+                            <td class="table-data">FrontEnd</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Skill Modal -->
+    <div id="add-skill-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-button" id="close-skill-modal-button">&times;</button>
+            <h3 class="modal-title">Add New Skill</h3>
+            <div class="form-fields">
+                <div class="form-group">
+                    <label for="skill-name-input" class="form-label">Skill Name</label>
+                    <input type="text" id="skill-name-input" placeholder="Skill Name" class="input-field">
+                </div>
+                <div class="form-group">
+                    <label for="skill-description-input" class="form-label">Description</label>
+                    <input type="text" id="skill-description-input" placeholder="Description" class="input-field">
+                </div>
+            </div>
+            <button id="submit-skill-button" class="submit-button">
+                Submit
+            </button>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="skill.js"></script>
+</body>
+</html>
